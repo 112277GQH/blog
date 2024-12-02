@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随记</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            background: url("./12.jpg");
+            background-size: cover;
+        }
+
+       .container {
+        background:rgb(255, 255, 255,0.75);
+        margin: 60px 100px 60px 100px;
+        border-radius: 20px;
+        padding: 20px 20px;
+        display: flex;
+       
+       }
+       img {
+            width: 230px;
+            height: auto;
+            object-fit: cover;
+        }
+        img:hover{
+            transform: scale(1.2);
+            transition: 0.5s;
+        }
+    
+        h2 {
+            margin-bottom: 10px;
+        }
+        p {
+            color: #333;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .content {
+            margin-left: 20px; 
+        }
+
+        header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 99; /*数字越大,可以覆盖其他元素*/
+        }
+
+.Blog {
+  font-size: 2em;
+  color: rgb(51, 125, 236);
+  user-select: none; /*防止文本被选中*/
+}
+
+.navigation a {
+  position: relative;
+  font-size: 1.3em;
+  color:rgb(51, 125, 236);
+  text-decoration: none; /*去掉下划线*/
+  font-weight: 600; /*文本粗细*/
+  margin-left: 40px;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background:rgb(#fff,0);
+  border-radius: 5px;
+  transform: scaleX(0); /* 将元素的宽度缩放到0*/
+  transition: transform 0.5s;
+}
+.navigation a:hover::after {
+  transform: scaleX(1);
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="Blog">MY BLOG</h2>
+        <nav class="navigation">
+            <a href="./综合.html">首页</a>
+            <a href="./音乐视频.html">音乐视频</a>
+            <a href="./相册.html">相册</a>
+        </nav> 
+    </header>
+    <div class="container">
+        <img src="./16.jpeg" alt="与384的婚礼">
+        <div class="content">
+        <h2>雪夜</h2>
+        <p>
+            雪地里没有他的脚印，他应该已经等了我很久了。<br>
+            他堆了一个雪人，和他很像.雪人脖子上的围巾是塞巴斯蒂安织给我的，因为我夸过他的围巾很可爱，所以他
+            偷偷学了织围巾，歪歪扭扭的针线却组成了规整的一条和他戴的一样的围巾。 “你今天出门怎么不戴它，是不喜欢吗?”他的声音里好像有些失落, “那我
+            就送给小塞。”他斩钉截铁地叫这个雪人
+            小塞，我一下子笑出声来。
+            他的脸埋进他的围巾里，不愿再看我。
+            我来到他的身边，对着雪人说： “小塞
+            你的主人好像生气了，但我其实很喜欢你
+            戴着的这条围巾。但如果我以后每天都戴
+            着这条围巾，并且要用一个亲亲向你的主
+            人道歉，他会原谅我吗?”世界好安静，只有雪花落在我和他肩头的
+            声音。他会原谅你的。
+            听起来是“小塞”说话了,对吧?</p>
+      </div></div>
+    <div class="container">
+        <img src="./11.png" alt="春季月历">
+        <div class="content">
+       <h2>cocori的一年四季</h2>
+        <p>
+             单次收获作物:
+            防风草：种子价格20金，生长期4天，每季最多收获6次，作物价格35金，平均每日利润3.75金。<br>
+            蒜：种子价格40金，生长期4天，每季最多收获6次，作物价格60金，平均每日利润5金。<br>
+            土豆：种子价格50金，生长期6天，每季最多收获4次，作物价格80金，平均每日利润5金。<br>
+            郁金香：种子价格20金，生长期6天，每季最多收获4次，作物价格30金，平均每日利润1.66金。<br>
+            甘蓝菜：种子价格70金，生长期6天，每季最多收获4次，作物价格110金，平均每日利润6.67金。<br>
+            蓝莓：种子价格30金，生长期7天，每季最多收获3次，作物价格50金，平均每日利润5金。<br>
+            花椰菜：种子价格80金，生长期12天，每季最多收获2次，作物价格175金，平均每日利润7.92金。<br>
+            大黄：种子价格100金，生长期13天，每季最多收获2次，作物价格220金，平均每日利润9.23金。<br>
+            胡萝卜：种子价格0金，生长期3天，每季最多收获9次，作物价格35金，平均每日利润约11.67金。<br>
+            未碾米：种子价格40金，已灌溉生长期6天，未灌溉生长期8天，每季最多收获4次，作物价格30金.<br></p>
+      </div></div>
+    <div class="container">
+        <img src="./13.jpeg" alt="攻略手册">
+        <div class="content">
+        <h2>To june</h2>
+        <p>
+            一个只在秋冬季节出现的里奇村的冬系男,冬季夜市你还会给大家弹钢琴🥹🥹,第一次遇到你真的帅的惨绝人寰,可惜我后面很少坐缆车来里奇,时时刻刻想念你,下一年秋我会带着你最喜欢的苹果在你的钢琴前等你...
+        </p>
+    </div>
+</body>
+</html>

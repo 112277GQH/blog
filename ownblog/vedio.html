@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>音乐视频</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #f7b8e9;
+      }
+      .clip video {
+        width: 1000px;
+        outline: none;
+        margin-top: 150px;
+        display: flex;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 水平居中 */
+      }
+
+      .play {
+        width: 115px;
+        height: 35px;
+        background: transparent;
+        border: 2px solid #fff;
+        background: rgb(255, 255, 255, 0.6);
+        color: #ed83d6;
+        border-radius: 6px;
+        font-size: 1.3em;
+        cursor: pointer;
+        font-weight: 500;
+        margin: 40px; /* 给按钮之间添加一些空间 */
+      }
+      .close {
+        width: 80px;
+        height: 40px;
+        background: rgb(255, 255, 255, 0.6);
+        color: #ed83d6;
+        border: 2px solid #fff;
+        border-radius: 6px;
+        font-size: 1.3em;
+        cursor: pointer;
+        font-weight: 500;
+        margin: 40px; /* 给按钮之间添加一些空间 */
+      }
+
+      .Blog {
+        font-size: 2em;
+        color: white;
+        user-select: none; /*防止文本被选中*/
+      }
+
+      .navigation a {
+        position: relative;
+        font-size: 1.5em;
+        color: #fff;
+        text-decoration: none; /*去掉下划线*/
+        font-weight: 600; /*文本粗细*/
+        margin-left: 40px;
+      }
+      header {
+        position: fixed;
+        width: 90%;
+        padding: 20px 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 99; /*数字越大,可以覆盖其他元素*/
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2 class="Blog">MY BLOG</h2>
+      <nav class="navigation">
+        <a href="./综合.html">首页</a>
+        <a href="./随记.html">随记</a>
+        <a href="./相册.html">相册</a>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="clip">
+        <video src="./1.mp4" controls></video>
+      </div>
+      <div class="controls">
+        <button class="play">Play Video</button>
+        <button class="close">Close</button>
+      </div>
+    </div>
+    <script>
+      let play = document.querySelector(".play");
+      let close = document.querySelector(".close");
+      let video = document.querySelector("video");
+
+      play.onclick = function () {
+        video.play();
+        video.currentTime = 0; // 可选：从头开始播放
+      };
+
+      close.onclick = function () {
+        video.pause();
+      }
+    </script>
+  </body>
+</html>

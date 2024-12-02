@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99; /*数字越大,可以覆盖其他元素*/
+}
+
+.Blog {
+  font-size: 2em;
+  color: pink;
+  user-select: none; /*防止文本被选中*/
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: url("./1.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.navigation a {
+  position: relative;
+  font-size: 1.3em;
+  color: #fff;
+  text-decoration: none; /*去掉下划线*/
+  font-weight: 600; /*文本粗细*/
+  margin-left: 40px;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform: scaleX(0); /* 将元素的宽度缩放到0*/
+  transition: transform 0.5s;
+}
+.navigation a:hover::after {
+  transform: scaleX(1);
+}
+.navigation .btnSearch {
+  width: 120px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer; /*当鼠标指针悬停在这个元素上时，指针会变成一个手形图标，表示该元素是可点击的或可交互的*/
+  color: #fff;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.5s; /*延迟*/
+}
+
+.navigation .btnSearch:hover {
+  background: #e882d5;
+  color: #da1265;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.shell {
+  width: 780px;
+  height: 580px;
+  background: #eebae1;
+  border-radius: 50px;
+  position: relative;
+}
+.head {
+  height: 340px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.head::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("./3.jpg");
+  background-size: cover;
+  border-radius: 50px;
+  z-index: -1;
+  transform: skewY(-4deg);
+  transform-origin: 0 0;
+}
+.cover {
+  position: absolute;
+  top: 190px;
+  left: 25px;
+  width: 220px;
+  z-index: 2;
+  border-radius: 500px;
+  border: 10px #fff solid;
+  box-shadow: 0 5px 10px #00000065;
+}
+.data {
+  padding: 190px 0 0 280px;
+  text-shadow: 0 0 20px #f09fed;
+}
+.data .title1 {
+  color: rgb(225, 69, 197);
+  font-size: 50px;
+  font: 900 50px "";
+  margin-bottom: 5px;
+  position: relative;
+}
+.data .title2 {
+  color: #cc3991;
+  font: 500 24px "";
+}
+.foot {
+  line-height: 26px;
+  color: #444;
+}
+.tags {
+  padding-left: 30px;
+  padding-top: 100px;
+}
+
+.tag {
+  background: rgb(149, 178, 255);
+  color: #fff;
+  border-radius: 10px;
+  padding: 3px 8px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+.tag:hover {
+  background: #e882d5;
+  color: rgb(149, 178, 255);
+}
+.introduce {
+  padding: 25px 0 0 35px;
+  width: 480px;
+  float: left;
+}
